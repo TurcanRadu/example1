@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <style>
+        .main-container {margin:25px auto;}
+    </style>
+</head>
+<body>
+
+    <div class="container main-container">
+        <table class="items-list table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Edit Item</th>
+                    <th>Remove Item</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script id="item-template" type="text/mustache">
+        {{#items}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{desc}}</td>
+                <td><a href="#" class="add-item"><i class="glyphicon glyphicon-edit"></i></a></td>
+                <td><a href="#" class="remove-item" data-item-id="{{id}}"><i class="glyphicon glyphicon-remove"></i></a></td>
+            </tr>
+        {{/items}}
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
